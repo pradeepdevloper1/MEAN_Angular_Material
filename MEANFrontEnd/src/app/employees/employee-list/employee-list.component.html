@@ -1,0 +1,65 @@
+<div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- empid Column -->
+    <ng-container matColumnDef="empid">
+      <th mat-header-cell *matHeaderCellDef> EmpID. </th>
+      <td mat-cell *matCellDef="let element"> {{element.empid}} </td>
+    </ng-container>
+  
+    <!-- fullName Column -->
+    <ng-container matColumnDef="fullName">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.fullName}} </td>
+    </ng-container>
+
+     <!-- Email Column -->
+     <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+
+     <!--  mobile Column-->
+     <ng-container matColumnDef="mobile">
+        <th mat-header-cell *matHeaderCellDef> Mobile </th>
+        <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+      </ng-container>
+  
+    <!-- City Column -->
+    <ng-container matColumnDef="city">
+      <th mat-header-cell *matHeaderCellDef> City </th>
+      <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+    </ng-container>
+
+     <!-- Department Column -->
+     <ng-container matColumnDef="gender">
+        <th mat-header-cell *matHeaderCellDef> Gender </th>
+        <td mat-cell *matCellDef="let element"> {{element.gender}} </td>
+      </ng-container>
+
+  <!-- Department Column -->
+    <ng-container matColumnDef="department">
+        <th mat-header-cell *matHeaderCellDef> Department </th>
+        <td mat-cell *matCellDef="let element"> {{element.department}} </td>
+      </ng-container>
+  
+     <!-- Hire Date Column -->
+     <ng-container matColumnDef="hireDate">
+        <th mat-header-cell *matHeaderCellDef> HireDate </th>
+        <td mat-cell *matCellDef="let element"> {{element.hireDate}} </td>
+      </ng-container>
+  
+   <!-- isPermanent Column -->
+     <ng-container matColumnDef="isPermanent">
+        <th mat-header-cell *matHeaderCellDef> IsPermanent </th>
+        <td mat-cell *matCellDef="let element"> {{element.isPermanent}} </td>
+      </ng-container>
+      
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
